@@ -7,6 +7,9 @@ const searchForm = document.querySelector("form button");
 const errorMsg = document.querySelector(".error-message");
 const loading = document.querySelector(".loading");
 
+errorMsg.style.display = "none";
+loading.style.display = "none";
+
 async function getData(location) {
   try {
     const fetchedData = await fetch(
@@ -34,12 +37,12 @@ async function fetchedData(query) {
     reultsDiv.style.display = "none";
     weekBox.style.display = "none";
     errorMsg.style.display = "none";
-    loading.style.display = "block";
+    loading.style.display = "flex";
     data = await getData(query);
     if (!data) throw new Error("Failed to fetch weather data");
   } catch (error) {
     console.error(error);
-    errorMsg.style.display = "block";
+    errorMsg.style.display = "flex";
     loading.style.display = "none";
   } finally {
     loading.style.display = "none";
