@@ -88,6 +88,23 @@ hr {
 .loading {
   display: none;
 }
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 32px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.error-message > div {
+  width: 100%;
+}
+.error-message > div > img {
+  width: 100%;
+  text-align: center;
+  margin-right: 30px;
+}
 .hourly-forecast {
   display: flex;
   flex-wrap: wrap;
@@ -115,7 +132,9 @@ hr {
   font-weight: bold;
   filter: drop-shadow(0px 2px 10px rgba(1,1,1,0.2));
 }
-
+.loading img {
+  width: 300px;
+}
 .hour-icon {
   width: 60px;
   height: 60px;
