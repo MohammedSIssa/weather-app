@@ -1,6 +1,4 @@
-let currently, today, tomorrow, address, overallCondition;
-let data;
-let weekDayDates;
+let address, overallCondition;
 
 const reultsDiv = document.querySelector(".results");
 const weekBox = document.querySelector(".weekdays-box");
@@ -45,7 +43,7 @@ async function fetchedData(query) {
     loading.style.display = "none";
   } finally {
     loading.style.display = "none";
-    weekDayDates = data.days
+    let weekDayDates = data.days
       .map((day) => day.datetime.split("-")[2])
       .splice(0, 7);
 
