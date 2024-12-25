@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif, system-ui;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+body {
+  background-color: #c3ffeb;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+.search-form {
+  background-color: #36cdff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 2px 10px rgba(1,1,1,0.2));
+}
+.search-area {
+  position: relative;
+}
+.error-message {
+  color: red !important;
+}
+.search-box input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.search-box input:focus {
+  outline: none;
+}
+.search-box button {
+  position: absolute;
+  right: 2px;
+  bottom: 0;
+  background-color: transparent;
+  border: none;
+}
+.results {
+  display: none;
+  padding: 30px;
+}
+.main-content {
+  display: flex;
+  padding: 30px;
+}
+button.active {
+  background-color: rgb(101, 226, 43) !important;
+}
+.weekday {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  border-radius: 12px;
+  margin: 10px;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+  filter: drop-shadow(0px 2px 10px rgba(1,1,1,0.2));
+  background: linear-gradient(to bottom, #2cd5ff , #0092b6 );
+  transition: all 0.3s;
+}
+.weekday img {
+  width: 50px;
+  height: 50px;
+}
+hr {
+  margin: 10px 0;
+  border: 1px solid #0092b6;
+}
+.weekdays-box,
+.error-message,
+.loading {
+  display: none;
+}
+.hourly-forecast {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-height: 340px;
+  overflow-y: scroll;
+  padding: 10px 5px;
+  background-color: rgba(1,1,1,0.075);
+  border-radius: 13px;
+}
+.hourly-forecast::-webkit-scrollbar {
+  display: none;
+}
+.hourly-forecast .hour {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #2cd5ff;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.hour-icon {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(2px 2px 16px rgba(22,22,22,0.4));
+}
+.hour.cloudy, 
+.hour.fog,
+.weekday.cloudy,
+.weekday.fog,
+.hour.wind,
+.weekday.wind {
+  background: linear-gradient(
+    to top, 
+    #a5a5a5, 
+    #f7f7f7
+    );
+}
+.hour.partly-cloudy-day,
+.weekday.partly-cloudy-day {
+  background: linear-gradient(
+    to bottom, 
+    #82e4fd, 
+    #15b4dc
+    );
+}
+.hour.clear-day,
+.weekday.clear-day {
+  background: linear-gradient(
+    to bottom, 
+    #2cd5ff, 
+    #0ba4ca
+    );
+}
+
+.hour.snow,
+.weekday.snow {
+  background: linear-gradient(
+    to bottom, 
+    #9aebff, 
+    #52dcff
+    );
+}
+.hour.rain,
+.weekday.rain {
+  background: linear-gradient(
+    to bottom, 
+    #e1e1e1, 
+    #a9a9a9
+    );
+}
+.hour:nth-child(1),
+.hour:nth-child(2),
+.hour:nth-child(3),
+.hour:nth-child(4),
+.hour:nth-child(5),
+.hour:nth-child(6)
+{
+  background: linear-gradient(
+    to bottom, 
+    #632b6c, 
+    #f09f9c
+    ) !important;
+  color: white;
+}
+.hour:nth-child(19),
+.hour:nth-child(20),
+.hour:nth-child(21),
+.hour:nth-child(22),
+.hour:nth-child(23),
+.hour:nth-child(24),
+.hour.partly-cloudy-night,
+.hour.clear-night
+ {
+  background: linear-gradient(
+    to bottom, 
+    #632b6c, 
+    #f09f9c
+    ) !important;
+  color: white;
+}

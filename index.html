@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <form class="search-form">
+          <div class="search-area">
+            <input type="text" id="search" required autocomplete="off" placeholder="Search..." />
+            <button type="submit"><img src="./icons/search.svg" /></button>
+          </div>
+        </form>
+      </div>
+      <div class="main-content">
+        <div class="loading">Fetching Data...</div>
+        <div class="error-message">Error Fetching Data!</div>
+        <div class="weekdays-box"></div>
+        <div class="results">
+          <div class="Actual-Address"><h1 class="city-name"></h1></div>
+          <div class="Weekend-Weather">This Weekend: <span class="overall-conditions"></span></div>
+          <hr>
+          <div class="Today-Date"><h3 class="day-date"></h3></div>
+          <div class="Weather-Today"><span class="weather-desc"></span></div>
+          <div class="Temperature"><h1 class="temp"></h1></div>
+          <div class="Low-High">Low: <span class="temp-min"></span> | High: <span class="temp-max"></span></div>
+          <hr>
+          <div class="Forecast"><h1>Hourly Forecast</h1></div>
+          <div class="hourly-forecast">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="utils.js"></script>
+    <script src="displayUI.js"></script>
+    <script src="api.js"></script>
+  </body>
+</html>
