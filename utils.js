@@ -13,3 +13,17 @@ function hours24to12(h) {
     return +h + "AM";
   }
 }
+
+function whatDayItIs() {
+  const dayNames = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let now = new Date()
+  today = dayNames[now.getDay()]
+}
