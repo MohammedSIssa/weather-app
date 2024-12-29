@@ -26,4 +26,5 @@ function whatDayItIs() {
   ];
   let now = new Date()
   today = dayNames[now.getDay()]
+  return today
 }
